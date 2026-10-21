@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Security Test</title>
+</head>
+<body>
+    <h1>JavaScript Security Review</h1>
+
+    <label for="userInput">Enter a message:</label>
+    <input type="text" id="userInput" placeholder="Type something">
+    <button id="testButton">Test Secure Code</button>
+
+    <h3>Output:</h3>
+    <div id="output"></div>
+
+    <script src="JavaScript/vulnerable_code.js"></script>
+    <script>
+        document.getElementById("testButton").addEventListener("click", function () {
+            const value = document.getElementById("userInput").value;
+            displayMessage(value);
+        });
+    </script>
+</body>
+</html>
